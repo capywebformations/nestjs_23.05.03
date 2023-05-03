@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "33594c2a-fa3a-4004-9112-405519bd3664",
+		"name": "ApiNestJs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "GET /posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphY3F1ZXNAZXhlbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MTg2NzI3OSwiZXhwIjoxNjY0NDU5Mjc5fQ.vAq4twfScvCrc9vPMHgoB9IbMB9LuZnOFnYo9emvsk8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "test 3",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "toto",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /posts/:post_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/posts/6452169de4df5a918bf3db4c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"6452169de4df5a918bf3db4c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /posts/:post_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "new title 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/posts/6452169de4df5a918bf3db4c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"6452169de4df5a918bf3db4c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /posts/:post_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/posts/6452169de4df5a918bf3db4c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"6452169de4df5a918bf3db4c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

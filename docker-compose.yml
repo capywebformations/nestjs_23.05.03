@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  node:
+    container_name: project_node
+    image: 'node:latest'
+    working_dir: /home/app
+    command:
+      - /bin/sh
+      - '-c'
+      - 'npm i -g @nestjs/cli && npm install && npm run start:dev'
+    ports:
+      - '3000:3000'
+    volumes:
+    - './app:/home/app'
+    links:
+      - mongo
+    networks:
+      - my-network
+  mongo:
+    container_name: project_mongo
+    image: 'mongo:latest'
+    ports:
+      - '27017:27017'
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge
